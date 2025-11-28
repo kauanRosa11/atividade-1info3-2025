@@ -1,5 +1,7 @@
 # Atividade Avaliativa - 1INFO3 - 2025
 
+IMPORTANTE: Essa atividade pode ser desenvolvida em grupos de até 3 integrantes
+
 ## [Problema 1](https://github.com/adrianorodriguesdemelo/atividade-1info3-2025/blob/main/problema1.html)
 
 Programe as seguintes funções:
