@@ -2,6 +2,8 @@
 <meta charset="UTF-8">
 <script>
   // NOMES DOS INTEGRANTES DA EQUIPE:
+
+  // Nicolas Martins Paiva && Kauan Rosa de Oliveira
   
   /* PROBLEMA 2:
   Considere a seguinte situação: a população de um determinado tipo de bactéria quadruplica de tamanho a cada 3 dias.
@@ -11,14 +13,38 @@
   de uma colônia inicialmente com 47 bactérias.
 */
 
+// Vou considerar que todos os meses tem 30 dias;
+
+//ENTRADA
+
+let população = Number(prompt(`Qual a população de um tipo de bactérias?`));
+while (isNaN(população) || população < 1 || !Number.isInteger) {
+  alert(`Erro! A população deve ser maior que um habitante e ser um número inteiro (digite apenas números).`);
+  população = Number(prompt(`Qual a população de um tipo de bactérias?`));
+}
+let dias = Number(prompt(`Quantos dias essa colônia vai crescer?`));
+while (isNaN(população) || população < 1 || !Number.isInteger) {
+  alert(`Insira apenas valores númericos, inteiros e maiores que 0 `);
+  dias = Number(prompt(`Quantos dias essa colônia vai crescer?`));
+}
+
+dias = dias / 3;
 
 // Função
 
+function calculadora (n, t) {
+  for (let i = 0; i <= t; i++) {
+    população = n * 4**dias;
+  }
+
+}
 
 // Aplicação
 
+calculadora(população, dias);
 
 // Mostra resultado
 
+alert(`A população final ficou: ${população}`)
 
 </script>

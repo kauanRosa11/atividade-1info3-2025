@@ -3,6 +3,7 @@
 <script>
   // NOMES DOS INTEGRANTES DA EQUIPE:
 
+  // Kauan Rosa de Oliveira e Nicolas Martins Paiva
   
   /* PROBLEMA 1: Programe as seguintes funções:
 
@@ -20,16 +21,44 @@ OBSERVAÇÃO: Caso não esteja entendendo a descrição das funções acima (sob
 dê uma olhada no arquivo "atividade_programacao-1info3.pdf" para maior clareza.
 
 */
+// ENTRADA
+
+let primeiraFuncao = Number(prompt(`Digite o valor que deseja calcular em "f(x) = -3x^2 + 4x + 1":`));
+while (!Number.isInteger(primeiraFuncao) || isNaN(primeiraFuncao)) {
+  alert(`Insira apenas valores numéricos e inteiros`);
+  primeiraFuncao = Number(prompt(`Digite o valor que deseja calcular em "f(x) = -3x^2 + 4x + 1":`));
+}
+
+let segundaFuncao = Number(prompt(`Digite o valor que deseja calcular em "g(x) = 3x^2 - 8x, se x <= 1, g(x) = -7x + 2, se x > 1."`));
+while (!Number.isInteger(segundaFuncao) || isNaN(segundaFuncao)) {
+  alert(`Insira apenas valores numéricos e inteiros`);
+  segundaFuncao = Number(prompt(`Digite o valor que deseja calcular em "g(x) = 3x^2 - 8x, se x <= 1, g(x) = -7x + 2, se x > 1."`));
+}
+let resultado = 0;
+let resultado2 = 0;
 
 
 // Função
 
+function f (x) {
+  resultado = ((- (3)) * (x)**2) + (4 * x) + 1;
+}
+function g (y) {
+  if (y <= 1) {
+   resultado2 = (3 * y)**2 - (8 * y);
+  } else if (y > 1) {
+    resultado2 = - (7 * y) + 2
+  }
+}
 
 // Aplicação
 
+f(primeiraFuncao);
+g(segundaFuncao);
 
 
 // Mostra resultado
 
+alert(`O resultado da primeira função deu: ${resultado}\nE o da segunda deu: ${resultado2}`);
   
 </script>
